@@ -23,7 +23,7 @@ public:
 	Array& operator=(const Array& other) {
 		if (this != &other) {
 			this->size_ = other.size_;
-			this->array_ = new T[this->size_];//other.array_;
+			this->array_ = new T[this->size_];
 			for (int i = 0; i < this->size_; i++)
 				this->array_[i] = other.array_[i];
 		}
