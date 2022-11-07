@@ -16,5 +16,12 @@ int	main()
 			std::cout << array[i] << " ";
 		std::cout << std::endl;
 	}
+	{
+		int	array[] = {1, 2, 3};
+		::iter(array, -1, test);
+		for (int i = 0, j = sizeof(array) / sizeof(*array); i < j; i++)
+			std::cout << array[i] << " ";
+		std::cout << std::endl;
+	}
 	return 0;
 }

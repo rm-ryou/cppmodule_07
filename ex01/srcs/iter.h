@@ -8,11 +8,11 @@ template<class T> void	test(T& a) {
 	a++;
 }
 
-template<class T> void	iter(T *array, size_t len, void (*f)(T &));
-template<class T> void	iter(T *array, size_t len, void (*f)(T &)) {
-	if (array == NULL || f == NULL)
+template<class T> void	iter(T *array, long len, void (*f)(T &));
+template<class T> void	iter(T *array, long len, void (*f)(T &)) {
+	if (array == NULL || len < 0 || f == NULL)
 		return ;
-	for (size_t i = 0; i < len; i++)
+	for (long i = 0; i < len; i++)
 		f(array[i]);
 }
 
