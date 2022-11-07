@@ -23,6 +23,8 @@ $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.cpp
 	@mkdir -p $(DEPS_DIR)
 	$(CXX) $(CXXFLAGS) $(INC) -MP -MMD -MF $(DEPS_DIR)/$(*).d -c $< -o $@
 
+-include $(DEPS)
+
 clean:
 	$(RM) $(OBJS_DIR)
 	$(RM) $(DEPS_DIR)

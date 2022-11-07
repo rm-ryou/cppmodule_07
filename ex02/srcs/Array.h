@@ -11,9 +11,11 @@ private:
 	int	size_;
 public:
 	Array(): size_(0) {
+		std::cout << "Constructor called." << std::endl;
 		array_ = new T[this->size_];
 	};
 	Array(int size): size_(size) {
+		std::cout << "Constructor called." << std::endl;
 		array_ = new T[this->size_];
 	};
 	Array(const Array& array) {
